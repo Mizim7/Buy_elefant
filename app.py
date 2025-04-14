@@ -8,11 +8,6 @@ logging.basicConfig(level=logging.INFO)
 sessionStorage = {}
 
 
-@app.route('/webhook', methods=['POST'])
-def webhook():
-    return jsonify({"status": "OK"})
-
-
 @app.route('/post', methods=['POST'])
 def main():
     logging.info(f'Request: {request.json!r}')
